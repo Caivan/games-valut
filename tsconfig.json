@@ -28,6 +28,6 @@
       "@/shared": ["./packages/shared/src"]
     }
   },
-  "include": ["apps/**/*", "packages/**/*"],
+  "include": [ "packages/**/*"],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }
