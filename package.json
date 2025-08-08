@@ -1,4 +1,34 @@
 {
   "name": "games-vault",
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A modern monorepo setup with Yarn workspaces",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach --all run build",
+    "dev": "yarn workspaces foreach --all --parallel run dev",
+    "test": "yarn workspaces foreach --all run test",
+    "lint": "yarn workspaces foreach --all run lint",
+    "clean": "yarn workspaces foreach --all run clean",
+    "typecheck": "yarn workspaces foreach --all run typecheck",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,json,md}\"",
+    "vitest": "vitest",
+    "vitest:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vitest/ui": "^3.2.4",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
 }
