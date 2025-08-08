@@ -1,5 +1,5 @@
 {
-  "name": "gamevault-front-app",
+  "name": "@games-vault/gamevault-front-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
