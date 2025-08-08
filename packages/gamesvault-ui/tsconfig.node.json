@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "useDefineForClassFields": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2023",
+    "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
     "composite": true,
-    
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "declaration": true,
     "declarationMap": true,
-    "outDir": "./dist",
-    "jsx": "react-jsx",   
+    "outDir": "./dist-config",
 
     /* Linting */
     "strict": true,
@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["vite.config.ts"]
 }

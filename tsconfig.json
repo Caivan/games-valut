@@ -6,6 +6,7 @@
     "skipLibCheck": true,
     "allowJs": true,
     "strict": true,
+    "jsx": "react-jsx",
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -22,12 +23,13 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./packages/*/src"],
-      "@/ui": ["./packages/ui/src"],
-      "@/utils": ["./packages/utils/src"],
-      "@/shared": ["./packages/shared/src"]
+      "@games-vault/ui": ["./packages/gamesvault-ui/src"],
     }
   },
-  "include": [ "packages/**/*"],
+  "include": [
+    "packages/gamesvault-ui/src/**/*",
+    "packages/gamesvault-ui/tsconfig.json",
+    "apps/**/*",
+  ],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }
