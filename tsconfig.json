@@ -23,13 +23,11 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "@games-vault/ui": ["./packages/gamesvault-ui/src"],
+      "@games-vault/gamesvault-ui": ["./packages/gamesvault-ui/src"]
     }
   },
   "include": [
-    "packages/gamesvault-ui/src/**/*",
     "packages/gamesvault-ui/tsconfig.json",
-    "apps/**/*",
   ],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }
