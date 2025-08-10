@@ -5,7 +5,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "composite": true,
-    
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "verbatimModuleSyntax": true,
@@ -13,7 +13,7 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
-    "jsx": "react-jsx",   
+    "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,

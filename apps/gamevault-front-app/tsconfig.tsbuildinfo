@@ -1,1 +1,1 @@
-{"root":["./eslint.config.js","./vite.config.ts","./dist/assets/index-bdx1z-ok.js","./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.8.3"}
+{"root":["../../packages/gamesvault-ui/tsconfig.json"],"version":"5.8.3"}

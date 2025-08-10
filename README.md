@@ -1,4 +1,4 @@
-# Games Vault 
+# Games Vault
 
 A modern monorepo setup using Yarn workspaces with TypeScript support.
 
@@ -28,6 +28,7 @@ games-vault/
 ### Installation
 
 1. **Enable Yarn v4** (if not already done):
+
    ```bash
    corepack enable
    yarn set version 4.9.2
@@ -79,7 +80,7 @@ cd packages/my-new-package
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src --ext .ts,.tsx"
   }
 }
 ```
