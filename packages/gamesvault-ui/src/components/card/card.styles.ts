@@ -26,7 +26,7 @@ const getPaddingStyles = (padding: string) => {
   }
 };
 
-export const StyledCard = styled.div<CardProps>`
+export const StyledCard = styled.article<CardProps>`
   background-color: ${({ theme, variant = 'default' }) =>
     variant === 'muted' ? theme.colors.surfaceMuted : theme.colors.surface};
 

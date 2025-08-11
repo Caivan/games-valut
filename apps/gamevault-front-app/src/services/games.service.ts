@@ -116,6 +116,6 @@ export const getGames = async (
       };
 
       resolve(response);
-    }, 1000);
+    }, 5000);
   });
 };
