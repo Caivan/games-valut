@@ -13,6 +13,7 @@
     "@games-vault/gamesvault-ui": "workspace:packages/gamesvault-ui",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router": "^7.8.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {

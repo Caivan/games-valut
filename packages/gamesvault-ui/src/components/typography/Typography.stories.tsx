@@ -8,7 +8,8 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'A flexible typography component with multiple variants and semantic HTML elements.',
+        component:
+          'A flexible typography component with multiple variants and semantic HTML elements.',
       },
     },
   },
@@ -17,7 +18,8 @@ const meta = {
     variant: {
       control: { type: 'select' },
       options: ['headline', 'subtitle', 'body', 'caption', 'label'],
-      description: 'The typography variant that defines size, weight, and line height',
+      description:
+        'The typography variant that defines size, weight, and line height',
     },
     as: {
       control: { type: 'select' },
@@ -66,7 +68,8 @@ export const Subtitle: Story = {
 export const Body: Story = {
   args: {
     variant: 'body',
-    children: 'This is body text with the default styling for readable content.',
+    children:
+      'This is body text with the default styling for readable content.',
   },
 };
 
@@ -101,12 +104,23 @@ export const CustomElement: Story = {
 
 export const AllVariants: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Typography variant="display">Display Typography</Typography>
       <Typography variant="headline">Headline Typography</Typography>
       <Typography variant="subtitle">Subtitle Typography</Typography>
-      <Typography variant="body">Body typography for longer content and readable text passages.</Typography>
-      <Typography variant="caption">Caption typography for smaller details</Typography>
+      <Typography variant="body">
+        Body typography for longer content and readable text passages.
+      </Typography>
+      <Typography variant="caption">
+        Caption typography for smaller details
+      </Typography>
       <Typography variant="label">Label Typography</Typography>
     </div>
   ),
@@ -114,7 +128,14 @@ export const AllVariants: Story = {
 
 export const AllColors: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
       <Typography color="primary">Primary color text</Typography>
       <Typography color="secondary">Secondary color text</Typography>
     </div>
@@ -123,12 +144,29 @@ export const AllColors: Story = {
 
 export const SemanticElements: Story = {
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '600px' }}>
-      <Typography variant="headline" as="h1">H1 Headline</Typography>
-      <Typography variant="subtitle" as="h2">H2 Subtitle</Typography>
-      <Typography variant="body" as="p">Paragraph body text</Typography>
-      <Typography variant="caption" as="span">Span caption text</Typography>
-      <Typography variant="label" as="div">Div label text</Typography>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        maxWidth: '600px',
+      }}
+    >
+      <Typography variant="headline" as="h1">
+        H1 Headline
+      </Typography>
+      <Typography variant="subtitle" as="h2">
+        H2 Subtitle
+      </Typography>
+      <Typography variant="body" as="p">
+        Paragraph body text
+      </Typography>
+      <Typography variant="caption" as="span">
+        Span caption text
+      </Typography>
+      <Typography variant="label" as="div">
+        Div label text
+      </Typography>
     </div>
   ),
 };

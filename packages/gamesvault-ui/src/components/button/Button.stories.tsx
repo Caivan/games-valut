@@ -8,7 +8,8 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'A flexible button component with multiple variants and sizes.',
+        component:
+          'A flexible button component with multiple variants and sizes.',
       },
     },
   },
@@ -103,7 +104,14 @@ export const AllVariants: Story = {
 
 export const AllSizes: Story = {
   render: () => (
-    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
+    <div
+      style={{
+        display: 'flex',
+        gap: '1rem',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+      }}
+    >
       <Button size="small">Small</Button>
       <Button size="medium">Medium</Button>
       <Button size="large">Large</Button>

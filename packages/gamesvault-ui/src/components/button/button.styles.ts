@@ -15,7 +15,7 @@ const getVariantStyles = (variant: string) => {
       `;
     case 'secondary':
       return css`
-        background-color: ${({ theme }) => theme.colors.secondary};;
+        background-color: ${({ theme }) => theme.colors.secondary};
         color: ${({ theme }) => theme.colors.textPrimary};
         border: 1px solid ${({ theme }) => theme.colors.border};
 

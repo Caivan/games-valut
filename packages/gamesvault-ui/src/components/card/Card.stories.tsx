@@ -9,7 +9,8 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'A versatile card component for containing content with customizable styling.',
+        component:
+          'A versatile card component for containing content with customizable styling.',
       },
     },
   },
