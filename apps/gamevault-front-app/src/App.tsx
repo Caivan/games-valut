@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 import {
   Button,
   ThemeProvider,
+  Typography,
   type ThemeModeType,
 } from '@games-vault/gamesvault-ui';
 
@@ -18,15 +17,12 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Games Vault</h1>
+      <Typography variant="display" color="primary">
+        Welcome to Games Vault
+      </Typography>
+      <Typography variant="headline" as="h1" color="primary">
+        The Ultimate Gaming Experience
+      </Typography>
       <div className="card">
         <Button onClick={() => toggleTheme()}>Toggle Theme</Button>
       </div>
