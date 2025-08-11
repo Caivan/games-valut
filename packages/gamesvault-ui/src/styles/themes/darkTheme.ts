@@ -10,6 +10,7 @@ export const darkTheme: DefaultTheme = {
     secondaryHover: '#E9A7C1',
     background: '#111827', // Rich Charcoal
     surface: '#1F2937', // Darker Card Background
+    surfaceMuted: '#1C1C22', // soft charcoal for panels/cards
     textPrimary: '#F9FAFB', // Almost White
     textSecondary: '#D1D5DB', // Light Gray
     border: '#374151',

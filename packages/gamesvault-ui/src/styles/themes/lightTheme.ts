@@ -10,6 +10,7 @@ export const lightTheme: DefaultTheme = {
     secondaryHover: '#A84D78',
     background: '#F9FAFB', // Soft White
     surface: '#FFFFFF',
+    surfaceMuted: '#F3F4F6', // subtle light gray for panels/cards
     textPrimary: '#1B1B1B', // Almost Black
     textSecondary: '#3E4C59', // Muted Charcoal
     border: '#D1D5DB',

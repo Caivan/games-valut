@@ -11,6 +11,7 @@ declare module 'styled-components' {
       primary: string;
       primaryHover: string;
       surface: string;
+      surfaceMuted: string;
       secondary: string;
       secondaryHover: string;
       background: string;
