@@ -1,33 +1,31 @@
-import { Button, Card, Typography } from '@games-vault/gamesvault-ui';
-import { useContext } from 'react';
-import { ThemeContext } from '../context/themeContext';
+import { Typography } from '@games-vault/gamesvault-ui';
+import { useEffect, useState } from 'react';
+import { getGames } from '../services/games.service';
+import type { Game } from '../types';
+import GamesList from '../components/gamesList/GamesList';
+
 
 function HomePage() {
-  useContext(ThemeContext);
-  const { toggleTheme } = useContext(ThemeContext);
+  const [games, setGames] = useState<Game[]>([]);
+  useEffect(() => {
+    getGames(1, 6)
+      .then(res => {
+        return res.data;
+      })
+      .then(data => {
+        console.log(data);
+        setGames(data);
+      });
+  }, []);
+
   return (
-    <>
-      <Typography variant="display" color="primary">
-        Welcome to Games Vault
-      </Typography>
-      <Typography variant="headline" as="h1" color="primary">
-        The Ultimate Gaming Experience
-      </Typography>
-      <Card variant="muted" padding="large" radius="xl">
-        <Typography variant="subtitle">Explore Your Favorite Games</Typography>
-        <Typography variant="body" color="secondary">
-          Discover a vast collection of games across various genres. Join the
-          community and start your gaming journey today!
-        </Typography>
-        <Button onClick={() => toggleTheme()}>Toggle Theme</Button>
-      </Card>
-      <Card variant="default" padding="medium" radius="lg" interactive>
-        <Typography variant="subtitle">Card Title</Typography>
-        <Typography variant="body" color="secondary">
-          This is some card content that demonstrates the card component.
-        </Typography>
-      </Card>
-    </>
+    <section>
+
+
+      <Typography variant="subtitle">Games List</Typography>
+
+      <GamesList games={games} />
+    </section>
   );
 }
 
