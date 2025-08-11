@@ -3,6 +3,7 @@ import './App.css';
 
 import {
   Button,
+  Card,
   ThemeProvider,
   Typography,
   type ThemeModeType,
@@ -23,12 +24,19 @@ function App() {
       <Typography variant="headline" as="h1" color="primary">
         The Ultimate Gaming Experience
       </Typography>
-      <div className="card">
+      <Card variant="muted" padding="large" radius="xl" interactive>
+        <Typography variant="subtitle">Explore Your Favorite Games</Typography>
+        <Typography variant="body" color="secondary">
+          Discover a vast collection of games across various genres. Join the community and start your gaming journey today!
+        </Typography>
         <Button onClick={() => toggleTheme()}>Toggle Theme</Button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </Card>
+      <Card variant="default" padding="medium" radius="lg" interactive>
+        <Typography variant="subtitle">Card Title</Typography>
+        <Typography variant="body" color="secondary">
+          This is some card content that demonstrates the card component.
+        </Typography>
+      </Card>
     </ThemeProvider>
   );
 }
