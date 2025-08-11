@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+
 
 import {
   Button,
@@ -24,7 +24,7 @@ function App() {
       <Typography variant="headline" as="h1" color="primary">
         The Ultimate Gaming Experience
       </Typography>
-      <Card variant="muted" padding="large" radius="xl" interactive>
+      <Card variant="muted" padding="large" radius="xl" >
         <Typography variant="subtitle">Explore Your Favorite Games</Typography>
         <Typography variant="body" color="secondary">
           Discover a vast collection of games across various genres. Join the community and start your gaming journey today!
@@ -37,6 +37,7 @@ function App() {
           This is some card content that demonstrates the card component.
         </Typography>
       </Card>
+      <h1>hello world</h1>
     </ThemeProvider>
   );
 }
