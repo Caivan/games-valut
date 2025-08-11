@@ -1,8 +1,16 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/themeContext';
+import { Button, Typography } from '@games-vault/gamesvault-ui';
+import { StyledHeader } from './header.styles';
+
 function Header() {
+  const { toggleTheme } = useContext(ThemeContext);
+
   return (
-    <header>
-      <h1>Games Vault</h1>
-    </header>
+    <StyledHeader>
+      <Typography variant="headline">Games Vault</Typography>
+      <Button onClick={() => toggleTheme()}>Toggle Theme</Button>
+    </StyledHeader>
   );
 }
 
