@@ -1,14 +1,12 @@
 export const baseTokens = {
   spacing: {
-    0: '0px',
+    none: '0px',
     xs: '4px', // space.1
     sm: '8px', // space.2
     md: '16px', // space.4
     lg: '24px', // space.6
     xl: '32px', // space.8
-    '2xl': '40px', // space.10
-    '3xl': '48px', // space.12
-    '4xl': '64px', // space.16
+    xxl: '48px', // space.12
   },
   radii: {
     none: '0px',
