@@ -1,0 +1,116 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { darkTheme } from '../styles';
+
+<Meta title="Design System / Colors / 02 Dark Theme" />
+
+<ColorPalette>
+  {/* Full system color palette */}
+  <ColorItem
+    title="theme.colors"
+    subtitle="Complete system color palette"
+    colors={darkTheme.colors}
+  />
+
+  {/* Primary */}
+  <ColorItem
+    title="theme.colors.primary"
+    subtitle="Primary brand color — used for main actions, highlights, and active states"
+    colors={{ primary: darkTheme.colors.primary }}
+  />
+
+  <ColorItem
+    title="theme.colors.primaryHover"
+    subtitle="Hover state for primary elements (buttons, links)"
+    colors={{ primaryHover: darkTheme.colors.primaryHover }}
+  />
+
+  {/* Secondary */}
+  <ColorItem
+    title="theme.colors.secondary"
+    subtitle="Secondary brand color — used for accents and complementary highlights"
+    colors={{ secondary: darkTheme.colors.secondary }}
+  />
+
+  <ColorItem
+    title="theme.colors.secondaryHover"
+    subtitle="Hover state for secondary elements"
+    colors={{ secondaryHover: darkTheme.colors.secondaryHover }}
+  />
+
+  {/* Background & Surface */}
+  <ColorItem
+    title="theme.colors.background"
+    subtitle="Default page background color"
+    colors={{ background: darkTheme.colors.background }}
+  />
+
+  <ColorItem
+    title="theme.colors.surface"
+    subtitle="Surface color for cards, panels, and containers"
+    colors={{ surface: darkTheme.colors.surface }}
+  />
+
+  {/* Text */}
+  <ColorItem
+    title="theme.colors.textPrimary"
+    subtitle="Main text color for high emphasis content"
+    colors={{ textPrimary: darkTheme.colors.textPrimary }}
+  />
+
+  <ColorItem
+    title="theme.colors.textSecondary"
+    subtitle="Muted text color for secondary content and descriptions"
+    colors={{ textSecondary: darkTheme.colors.textSecondary }}
+  />
+
+  {/* Accent */}
+  <ColorItem
+    title="theme.colors.accent"
+    subtitle="Highlight or call-to-action color (used sparingly)"
+    colors={{ accent: darkTheme.colors.accent }}
+  />
+
+  {/* Feedback Colors */}
+  <ColorItem
+    title="theme.colors.success"
+    subtitle="Success state — confirmations, positive messages"
+    colors={{ success: darkTheme.colors.success }}
+  />
+
+  <ColorItem
+    title="theme.colors.warning"
+    subtitle="Warning state — alerts and caution messages"
+    colors={{ warning: darkTheme.colors.warning }}
+  />
+
+  <ColorItem
+    title="theme.colors.error"
+    subtitle="Error state — form validation errors, failed actions"
+    colors={{ error: darkTheme.colors.error }}
+  />
+
+  <ColorItem
+    title="theme.colors.danger"
+    subtitle="Danger state — destructive actions such as delete"
+    colors={{ danger: darkTheme.colors.danger }}
+  />
+
+  <ColorItem
+    title="theme.colors.info"
+    subtitle="Informational state — tips, hints, and neutral messages"
+    colors={{ info: darkTheme.colors.info }}
+  />
+
+  {/* Border & Overlay */}
+  <ColorItem
+    title="theme.colors.border"
+    subtitle="Border color for separators and outlines"
+    colors={{ border: darkTheme.colors.border }}
+  />
+
+  <ColorItem
+    title="theme.colors.overlay"
+    subtitle="Overlay color for modals, drawers, and dimmed backgrounds"
+    colors={{ overlay: darkTheme.colors.overlay }}
+  />
+</ColorPalette>

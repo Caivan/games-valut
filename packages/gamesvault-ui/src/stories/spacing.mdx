@@ -1,0 +1,89 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { baseTokens } from '../styles/themes/baseTokens';
+import { darkTheme } from '../styles/themes/darkTheme';
+
+<Meta title="Design System / Spacing" />
+
+# Spacing Tokens
+
+These tokens define the consistent spacing scale used across the design system to maintain rhythm and alignment.
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Value</th>
+      <th>Example</th>
+      <th>Usage Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>none</code></td>
+      <td>{baseTokens.spacing.none}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.none, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>No space — used when elements must touch directly.</td>
+    </tr>
+    <tr>
+      <td><code>xs</code></td>
+      <td>{baseTokens.spacing.xs}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.xs, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Very tight padding/margin, e.g., space between icon and label inside buttons.</td>
+    </tr>
+    <tr>
+      <td><code>sm</code></td>
+      <td>{baseTokens.spacing.sm}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.sm, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Small gaps like margin between form inputs or spacing in tight layouts.</td>
+    </tr>
+    <tr>
+      <td><code>md</code></td>
+      <td>{baseTokens.spacing.md}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.md, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Default padding around cards, containers, or section gaps.</td>
+    </tr>
+    <tr>
+      <td><code>lg</code></td>
+      <td>{baseTokens.spacing.lg}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.lg, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Larger margins between major UI sections or groups of controls.</td>
+    </tr>
+    <tr>
+      <td><code>xl</code></td>
+      <td>{baseTokens.spacing.xl}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing.xl, height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Generous padding for spacious layouts or between cards on larger screens.</td>
+    </tr>
+    <tr>
+      <td><code>2xl</code></td>
+      <td>{baseTokens.spacing['2xl']}</td>
+      <td>
+        <div style={{ width: baseTokens.spacing['2xl'], height: 20, backgroundColor: darkTheme.colors.surface }} />
+      </td>
+      <td>Used for section spacing and large gutters in grid layouts.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Usage Summary
+
+- **none**: No spacing, for elements that must touch directly.  
+- **xs**: Very tight padding/margin, e.g., space between icon and label inside buttons.  
+- **sm**: Small gaps like margin between form inputs or spacing in tight layouts.  
+- **md**: Default padding around cards, containers, or section gaps.  
+- **lg**: Larger margins between major UI sections or groups of controls.  
+- **xl and above**: Spacious layouts, big sections, and whitespace for breathing room.

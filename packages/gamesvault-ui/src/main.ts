@@ -1,5 +1,4 @@
 export * from './components';
 export * from './styles';
-// export { Button } from './components/button/Button';
-// export type { ButtonProps } from './components/button/button.type';
-// export { ThemeProvider } from './styles/themes/ThemeProvider';
+// Re-export styled-components for consumers
+export { default as styled, css, keyframes } from 'styled-components';

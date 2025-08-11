@@ -1,0 +1,103 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { baseTokens } from '../styles/themes/baseTokens';
+
+
+
+<Meta title="Design System / Radii" />
+
+# Border Radius Tokens
+
+These tokens define the border-radius values used across the design system to ensure consistent rounding of corners.
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>none</code></td>
+      <td>{baseTokens.radii.none}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.none,
+        }} />
+      </td>
+    </tr>
+    <tr>
+      <td><code>sm</code></td>
+      <td>{baseTokens.radii.sm}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.sm,
+        }} />
+      </td>
+    </tr>
+    <tr>
+      <td><code>md</code></td>
+      <td>{baseTokens.radii.md}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.md,
+        }} />
+      </td>
+    </tr>
+    <tr>
+      <td><code>lg</code></td>
+      <td>{baseTokens.radii.lg}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.lg,
+        }} />
+      </td>
+    </tr>
+    <tr>
+      <td><code>xl</code></td>
+      <td>{baseTokens.radii.xl}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.xl,
+        }} />
+      </td>
+    </tr>
+    <tr>
+      <td><code>round</code></td>
+      <td>{baseTokens.radii.round}</td>
+      <td>
+        <div style={{
+          width: 50,
+          height: 50,
+          backgroundColor: '#004E89',
+          borderRadius: baseTokens.radii.round,
+        }} />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Usage
+
+- Use `none` for sharp corners or when a rectangular shape is desired.  
+- Use `sm` and `md` for subtle rounding on buttons, inputs, and smaller components.  
+- Use `lg` and `xl` for cards, modals, and containers requiring more softness.  
+- Use `round` for fully circular elements like avatars or icon buttons.

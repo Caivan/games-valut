@@ -9,13 +9,23 @@ declare module 'styled-components' {
     name: string;
     colors: {
       primary: string;
+      primaryHover: string;
       surface: string;
       surfaceMuted: string;
+      secondary: string;
+      secondaryHover: string;
+      background: string;
       textPrimary: string;
       textSecondary: string;
+      info: string;
       accent: string;
+      accentHover: string;
+      success: string;
+      error: string;
       danger: string;
       border: string;
+      warning: string;
+      overlay: string;
     };
     typography: {
       fontFamily: string;
@@ -27,9 +37,10 @@ declare module 'styled-components' {
         label: string;
       };
       weights: {
-        normal: number;
+        regular: number;
         medium: number;
         semibold: number;
+        bold: number;
       };
       lineHeights: {
         headline: number;
