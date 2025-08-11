@@ -1,30 +1,26 @@
 import { Typography } from '@games-vault/gamesvault-ui';
-import { useEffect, useState } from 'react';
-import { getGames } from '../services/games.service';
-import type { Game } from '../types';
 import GamesList from '../components/gamesList/GamesList';
-
+import useGamesData from '../hooks/useGameData';
 
 function HomePage() {
-  const [games, setGames] = useState<Game[]>([]);
-  useEffect(() => {
-    getGames(1, 6)
-      .then(res => {
-        return res.data;
-      })
-      .then(data => {
-        console.log(data);
-        setGames(data);
-      });
-  }, []);
-
+  const { games, loading, error } = useGamesData();
   return (
     <section>
-
-
       <Typography variant="subtitle">Games List</Typography>
-
-      <GamesList games={games} />
+      <GamesList
+        games={games.filter(game => game.isNew)}
+        renderSkeleton={loading}
+      />
+      {loading && (
+        <>
+          <Typography variant="body">Loading...</Typography>
+        </>
+      )}
+      {error && (
+        <Typography variant="body" color="secondary">
+          Error: {error}
+        </Typography>
+      )}
     </section>
   );
 }
