@@ -1,4 +1,4 @@
-import { Card, Typography, Button } from '@games-vault/gamesvault-ui';
+import { Card, Typography, Button, Spacer } from '@games-vault/gamesvault-ui';
 import type { Game } from '../../types';
 import { Badge, GameImage, GameMeta } from './gameCard.styles';
 
@@ -15,15 +15,15 @@ function GameCard({ game }: GameCardProps) {
         <Typography variant="subtitle">{game.title}</Typography>
         {game.isNew && <Badge>New</Badge>}
       </GameMeta>
-
+      <Spacer size="sm" />
       <Typography variant="caption" color="secondary">
         {game.provider.name}
       </Typography>
-
+      <Spacer size="sm" />
       <Typography variant="body" color="secondary">
         {game.tags?.join(', ')}
       </Typography>
-
+      <Spacer size="sm" />
       <Button variant="secondary" fullWidth>
         View Details
       </Button>

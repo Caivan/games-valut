@@ -1,7 +1,6 @@
 import type { Game } from '../../types';
 import { GameGrid } from './gamesList.styles';
 import GameCard from '../gameCard/GameCard';
-import { SkeletonContainer } from '../skeletonLoader/skeletonLoader.styles';
 import SkeletonLoader from '../skeletonLoader/SkeletonLoader';
 
 interface GamesListProps {

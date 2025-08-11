@@ -39,7 +39,7 @@ export const Default: Story = {
   args: {
     size: 'md',
   },
-  render: (args) => (
+  render: args => (
     <div style={{ border: '1px dashed #ccc', padding: '1rem' }}>
       <Typography>Content above spacer</Typography>
       <Spacer {...args} />
@@ -54,8 +54,15 @@ export const Horizontal: Story = {
     horizontal: true,
     vertical: false,
   },
-  render: (args) => (
-    <div style={{ border: '1px dashed #ccc', padding: '1rem', display: 'flex', alignItems: 'center' }}>
+  render: args => (
+    <div
+      style={{
+        border: '1px dashed #ccc',
+        padding: '1rem',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
       <Typography>Left content</Typography>
       <Spacer {...args} />
       <Typography>Right content</Typography>
@@ -77,7 +84,7 @@ export const AllSizes: Story = {
       <Spacer size="lg" />
       <Typography variant="caption">LG spacing above</Typography>
       <Spacer size="xl" />
-      <Typography variant="caption">XL spacing above</Typography>    
+      <Typography variant="caption">XL spacing above</Typography>
     </div>
   ),
 };
@@ -112,9 +119,11 @@ export const BothDirections: Story = {
     horizontal: true,
     vertical: true,
   },
-  render: (args) => (
+  render: args => (
     <div style={{ border: '1px dashed #ccc', padding: '1rem' }}>
-      <Typography>This spacer below has both horizontal and vertical spacing</Typography>
+      <Typography>
+        This spacer below has both horizontal and vertical spacing
+      </Typography>
       <div style={{ display: 'flex' }}>
         <Typography>Left</Typography>
         <Spacer {...args} />
