@@ -3,7 +3,7 @@ import type { ButtonProps } from './button.type';
 
 export const ButtonWrapper = styled.button<ButtonProps>`
   background-color: ${({ variant, theme }) =>
-    variant === 'primary' ? theme.colors.primary : 'transparent'};
+    variant === 'primary' ? theme.colors.primary : theme.colors.secondary};
   color: ${({ theme }) => theme.colors.textPrimary};
   padding: ${({ size }) =>
     size === 'small'

@@ -26,8 +26,6 @@
       "@games-vault/gamesvault-ui": ["./packages/gamesvault-ui/src"]
     }
   },
-  "include": [
-    "packages/gamesvault-ui/tsconfig.json",
-  ],
+  "include": ["packages/gamesvault-ui/tsconfig.json"],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }
