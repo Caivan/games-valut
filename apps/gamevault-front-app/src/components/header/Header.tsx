@@ -4,12 +4,14 @@ import { Button, Typography } from '@games-vault/gamesvault-ui';
 import { StyledHeader } from './header.styles';
 
 function Header() {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, currentTheme } = useContext(ThemeContext);
 
   return (
     <StyledHeader>
       <Typography variant="headline">Games Vault</Typography>
-      <Button onClick={() => toggleTheme()}>Toggle Theme</Button>
+      <Button size="small" onClick={() => toggleTheme()}>
+        {currentTheme === 'light' ? 'Dark' : 'Light'}
+      </Button>
     </StyledHeader>
   );
 }

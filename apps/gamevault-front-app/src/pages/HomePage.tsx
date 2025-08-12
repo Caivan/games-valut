@@ -5,7 +5,8 @@ import FilterBar from '../components/filterbar/FilterBar';
 import useFilteredGames from '../hooks/useFilteredGames';
 
 function HomePage() {
-  const { filteredGames, loading, error, filter, setFilter } = useFilteredGames();
+  const { filteredGames, loading, error, filter, setFilter } =
+    useFilteredGames();
 
   return (
     <section>
@@ -16,19 +17,15 @@ function HomePage() {
           Games List {filter.isNew && '(New Games)'}
           {filter.search && `(Search: "${filter.search}")`}
         </Typography>
+        {loading && <Typography variant="caption">Loading...</Typography>}
         <GamesList games={filteredGames} renderSkeleton={loading} />
-        {loading && (
-          <>
-            <Typography variant="body">Loading...</Typography>
-          </>
-        )}
         {error && (
           <Typography variant="body" color="secondary">
             Error: {error}
           </Typography>
         )}
         {!loading && filteredGames.length === 0 && (
-          <Typography variant="body">
+          <Typography variant="display" color="secondary">
             No games found matching your criteria.
           </Typography>
         )}
