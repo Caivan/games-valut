@@ -1,7 +1,9 @@
-import { styled } from '@games-vault/gamesvault-ui';
+import { Button, styled } from '@games-vault/gamesvault-ui';
 
 export const StyledHeader = styled.header`
   display: flex;
+  flex-direction: column;
+
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -14,12 +16,6 @@ export const StyledFilterContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
-
-  form {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-  }
 `;
 
 export const StyledSearchInput = styled.input`
@@ -33,4 +29,33 @@ export const StyledSearchInput = styled.input`
     outline: none;
     border-color: ${({ theme }) => theme.colors.border};
   }
+`;
+
+export const FiltersSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: ${({ theme }) => theme.spacing.sm};
+`;
+
+export const FilterTag = styled.div`
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.surface};
+  border-radius: ${({ theme }) => theme.radii.lg};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
+  font-size: ${({ theme }) => theme.typography.sizes.label};
+`;
+
+export const CloseButton = styled(Button)`
+  border: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  font-size: ${({ theme }) => theme.typography.sizes.label};
+  border-radius: ${({ theme }) => theme.radii.xl};
+  background-color: ${({ theme }) => theme.colors.danger};
 `;

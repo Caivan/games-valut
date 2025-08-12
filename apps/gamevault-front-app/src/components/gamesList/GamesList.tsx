@@ -11,10 +11,8 @@ interface GamesListProps {
 function GamesList({ games, renderSkeleton }: GamesListProps) {
   return (
     <GameGrid>
-      {games.map(game => (
-        <GameCard key={game.id} game={game} />
-      ))}
-      {games.length === 0 && !renderSkeleton && <div>No games available</div>}
+      {!renderSkeleton &&
+        games.map(game => <GameCard key={game.id} game={game} />)}
       {renderSkeleton && (
         <>
           <SkeletonLoader />

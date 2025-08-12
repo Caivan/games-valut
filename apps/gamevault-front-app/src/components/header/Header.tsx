@@ -9,7 +9,7 @@ function Header() {
   return (
     <StyledHeader>
       <Typography variant="headline">Games Vault</Typography>
-      <Button size='small' onClick={() => toggleTheme()}>
+      <Button size="small" onClick={() => toggleTheme()}>
         {currentTheme === 'light' ? 'Dark' : 'Light'}
       </Button>
     </StyledHeader>
