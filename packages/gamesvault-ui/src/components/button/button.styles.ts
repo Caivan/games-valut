@@ -16,11 +16,11 @@ const getVariantStyles = (variant: string) => {
     case 'secondary':
       return css`
         background-color: ${({ theme }) => theme.colors.secondary};
-        color: ${({ theme }) => theme.colors.textPrimary};
+        color: ${({ theme }) => theme.colors.surface};
         border: 1px solid ${({ theme }) => theme.colors.border};
 
         &:hover:not(:disabled) {
-          background-color: ${({ theme }) => theme.colors.surfaceMuted};
+          background-color: ${({ theme }) => theme.colors.secondaryHover};
         }
       `;
     case 'danger':

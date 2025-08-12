@@ -1,26 +1,38 @@
-import { Typography } from '@games-vault/gamesvault-ui';
+import { Spacer, Typography } from '@games-vault/gamesvault-ui';
 import GamesList from '../components/gamesList/GamesList';
-import useGamesData from '../hooks/useGameData';
+import { FilterContext } from '../context/filterContext';
+import FilterBar from '../components/filterbar/FilterBar';
+import useFilteredGames from '../hooks/useFilteredGames';
 
 function HomePage() {
-  const { games, loading, error } = useGamesData();
+  const { filteredGames, loading, error, filter, setFilter } = useFilteredGames();
+
   return (
     <section>
-      <Typography variant="subtitle">Games List</Typography>
-      <GamesList
-        games={games.filter(game => game.isNew)}
-        renderSkeleton={loading}
-      />
-      {loading && (
-        <>
-          <Typography variant="body">Loading...</Typography>
-        </>
-      )}
-      {error && (
-        <Typography variant="body" color="secondary">
-          Error: {error}
+      <FilterContext.Provider value={{ filter, setFilter }}>
+        <FilterBar />
+        <Spacer size="md" />
+        <Typography variant="subtitle">
+          Games List {filter.isNew && '(New Games)'}
+          {filter.search && `(Search: "${filter.search}")`}
         </Typography>
-      )}
+        <GamesList games={filteredGames} renderSkeleton={loading} />
+        {loading && (
+          <>
+            <Typography variant="body">Loading...</Typography>
+          </>
+        )}
+        {error && (
+          <Typography variant="body" color="secondary">
+            Error: {error}
+          </Typography>
+        )}
+        {!loading && filteredGames.length === 0 && (
+          <Typography variant="body">
+            No games found matching your criteria.
+          </Typography>
+        )}
+      </FilterContext.Provider>
     </section>
   );
 }

@@ -12,8 +12,6 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   ...props
 }) => {
-  console.log(`Button rendered with variant: ${variant} and size: ${size}`);
-
   return (
     <StyledButton
       variant={variant}
