@@ -23,7 +23,7 @@ export const Badge = styled.span`
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.surface};
   padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
-  border-radius: ${({ theme }) => theme.radii.sm};
+  border-radius: ${({ theme }) => theme.radii.lg};
   font-size: ${({ theme }) => theme.typography.sizes.label};
   font-weight: ${({ theme }) => theme.typography.weights.medium};
   text-transform: uppercase;
