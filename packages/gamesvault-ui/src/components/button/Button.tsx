@@ -10,7 +10,7 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   type = 'button',
-  ...props
+  ...rest
 }) => {
   return (
     <StyledButton
@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
       fullWidth={fullWidth}
       onClick={onClick}
       type={type}
-      {...props}
+      {...rest}
     >
       {children}
     </StyledButton>

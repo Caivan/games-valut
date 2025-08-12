@@ -10,7 +10,7 @@ export const Card: React.FC<CardProps> = ({
   className,
   onClick,
   interactive = false,
-  ...props
+  ...rest
 }) => {
   return (
     <StyledCard
@@ -20,7 +20,7 @@ export const Card: React.FC<CardProps> = ({
       className={className}
       onClick={onClick}
       interactive={interactive}
-      {...props}
+      {...rest}
     >
       {children}
     </StyledCard>

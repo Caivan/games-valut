@@ -1,12 +1,13 @@
-import styled from 'styled-components';
+import { styled } from '@games-vault/gamesvault-ui';
 
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--background-secondary, #f5f5f5);
-  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  background-color: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.textPrimary};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const StyledFilterContainer = styled.div`
@@ -23,13 +24,13 @@ export const StyledFilterContainer = styled.div`
 
 export const StyledSearchInput = styled.input`
   padding: 0.5rem;
-  border: 1px solid var(--border-color, #ccc);
+  border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 4px;
   font-size: 0.875rem;
   min-width: 200px;
 
   &:focus {
     outline: none;
-    border-color: var(--primary-color, #007bff);
+    border-color: ${({ theme }) => theme.colors.border};
   }
 `;
