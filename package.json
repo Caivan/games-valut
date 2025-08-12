@@ -5,8 +5,8 @@
   "private": true,
   "description": "A modern monorepo setup with Yarn workspaces",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "yarn workspaces foreach --all run build",

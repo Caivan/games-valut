@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 import type { TypographyProps, TypographyVariant } from './typography.type';
 
-
-
 const getVariantStyles = (variant: TypographyVariant) => {
   switch (variant) {
     case 'headline':
@@ -45,9 +43,11 @@ const getVariantStyles = (variant: TypographyVariant) => {
 export const StyledTypography = styled.div<TypographyProps>`
   font-family: ${({ theme }) => theme.typography.fontFamily};
   margin: 0;
-  
-  color: ${({ theme, color = 'primary' }) => 
-    color === 'secondary' ? theme.colors.textSecondary : theme.colors.textPrimary};
-  
+
+  color: ${({ theme, color = 'primary' }) =>
+    color === 'secondary'
+      ? theme.colors.textSecondary
+      : theme.colors.textPrimary};
+
   ${({ variant = 'body' }) => getVariantStyles(variant)}
 `;

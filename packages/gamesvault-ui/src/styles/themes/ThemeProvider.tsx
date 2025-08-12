@@ -15,7 +15,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   return (
     <>
       <StyledThemeProvider theme={themeMap[theme]}>
-        <GlobalStyles/>
+        <GlobalStyles />
         {children}
       </StyledThemeProvider>
     </>
