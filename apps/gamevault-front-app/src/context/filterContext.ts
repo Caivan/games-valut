@@ -6,10 +6,10 @@ const DEFAULT_INITIAL_PAGE = 1;
 export interface FilterState {
   page: number;
   pageSize: number;
-  search: string | null;
-  provider: string | null;
+  search?: string;
+  providers?: string[];
   isNew: boolean;
-  type: 'slots' | 'table' | 'live' | 'instant' | null;
+  types?: ('slots' | 'table' | 'live' | 'instant')[];
   hasMore?: boolean;
   totalPages?: number;
 }
@@ -24,9 +24,7 @@ export const FilterContext = React.createContext<FilterContextType>({
     page: DEFAULT_INITIAL_PAGE,
     pageSize: DEFAULT_PAGE_SIZE,
     search: '',
-    provider: null,
     isNew: false,
-    type: null,
   },
   setFilter: () => {},
 });
