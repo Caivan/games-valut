@@ -2,8 +2,9 @@ import { styled } from '@games-vault/gamesvault-ui';
 
 export const AppContainer = styled.div`
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.surface};
+  background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.textPrimary};
+  position: relative;
 `;
 
 export const MainContent = styled.main`

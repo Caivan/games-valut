@@ -9,7 +9,7 @@ export interface FilterState {
   search?: string;
   providers?: string[];
   isNew: boolean;
-  types?: ('slots' | 'table' | 'live' | 'instant')[];
+  types?: string[];
   hasMore?: boolean;
   totalPages?: number;
 }
