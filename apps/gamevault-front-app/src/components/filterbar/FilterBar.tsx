@@ -8,15 +8,9 @@ import {
 } from './filterBar.styles';
 import { FilterContext } from '../../context/filterContext';
 import { useDebounce } from '../../hooks';
-import AppliedFilters from '../apppliedFilters/AppliedFilters';
+import FilterTag from '../filterTag/FilterTag';
 
-function FilterBar({
-  existingProviders,
-  existingTypes,
-}: {
-  existingProviders?: string[];
-  existingTypes?: string[];
-}) {
+function FilterBar() {
   const { filter, setFilter } = useContext(FilterContext);
   const [searchInput, setSearchInput] = useState(filter.search || '');
   const debouncedSearchInput = useDebounce(searchInput, 300);
@@ -33,6 +27,11 @@ function FilterBar({
     setSearchInput(filter.search || '');
   }, [filter.search]);
 
+
+  const toggleNew = () => {
+    setFilter(prev => ({ ...prev, isNew: !prev.isNew }));
+  };
+
   return (
     <StyledHeader>
       <StyledFilterContainer>
@@ -42,11 +41,12 @@ function FilterBar({
           value={searchInput}
           onChange={e => setSearchInput(e.target.value)}
         />
+        <FilterTag
+          onClick={toggleNew}
+          showClose={filter.isNew}
+          value="New"
+        />
       </StyledFilterContainer>
-      <AppliedFilters
-        existingProviders={existingProviders}
-        existingTypes={existingTypes}
-      />
       <FiltersSection>
         <Button
           size="small"

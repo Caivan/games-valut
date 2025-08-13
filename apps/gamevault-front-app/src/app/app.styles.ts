@@ -8,7 +8,7 @@ export const AppContainer = styled.div`
 `;
 
 export const MainContent = styled.main`
-  padding: ${({ theme }) => theme.spacing.lg};
+  padding: ${({ theme }) => theme.spacing.md};
   max-width: 1200px;
   margin: 0 auto;
 `;

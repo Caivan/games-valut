@@ -6,7 +6,7 @@ export const StyledHeader = styled(Card)`
 
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.textPrimary};
 `;

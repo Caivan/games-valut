@@ -1,9 +1,10 @@
-import { Spacer, Typography } from '@games-vault/gamesvault-ui';
+import { Typography } from '@games-vault/gamesvault-ui';
 import { FilterContext } from '../context/filterContext';
 import { useFilteredGames } from '../hooks';
 
 import GamesList from '../components/gamesList/GamesList';
 import FilterBar from '../components/filterbar/FilterBar';
+import AppliedFilters from '../components/apppliedFilters/AppliedFilters';
 
 function HomePage() {
   const {
@@ -18,12 +19,11 @@ function HomePage() {
 
   return (
     <FilterContext.Provider value={{ filter, setFilter }}>
-      <FilterBar
+      <FilterBar/>
+      <AppliedFilters
         existingProviders={existingProviders}
         existingTypes={existingTypes}
       />
-      <Spacer size="md" />
-      {loading && <Typography variant="caption">Loading...</Typography>}
       <GamesList games={filteredGames} renderSkeleton={loading} />
       {error && (
         <Typography variant="body" color="secondary">
