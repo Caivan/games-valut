@@ -26,21 +26,25 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # Build the main front app
-      - name: Build front app
-        run: yarn build
+      # 1️⃣ Build UI package first
+      - name: Build UI package
+        run: yarn workspace gamevault-ui build
 
-      # Build Storybook for UI package
+      # 2️⃣ Build front app
+      - name: Build front app
+        run: yarn workspace gamevault-front-app build
+
+      # 3️⃣ Build Storybook for UI package
       - name: Build Storybook
         run: yarn workspace gamevault-ui build-storybook
 
       # Prepare deployment folder for GitHub Pages
       - name: Prepare deployment folder
         run: |
-          mkdir -p dist/app
-          mkdir -p dist/storybook
-          cp -r apps/gamevault-front-app/dist/* dist/app/
-          cp -r packages/gamevault-ui/storybook-static/* dist/storybook/
+          mkdir -p dist
+          cp -r apps/gamevault-front-app/dist dist/
+          mv dist/dist dist/app
+          cp -r packages/gamevault-ui/storybook-static dist/storybook
 
       # Deploy combined build to GitHub Pages
       - name: Deploy to GitHub Pages
