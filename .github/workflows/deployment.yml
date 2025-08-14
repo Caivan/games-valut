@@ -75,7 +75,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site-dist
-          path: .
+          path: dist
 
       # Configure GitHub Pages
       - name: Setup Pages
