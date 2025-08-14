@@ -28,15 +28,15 @@ jobs:
 
       # 1️⃣ Build UI package first
       - name: Build UI package
-        run: yarn workspace gamevault-ui build
+        run: yarn workspace @games-vault/gamesvault-ui build
 
       # 2️⃣ Build front app
       - name: Build front app
-        run: yarn workspace gamevault-front-app build
+        run: yarn workspace @games-vault/gamevault-front-app build
 
       # 3️⃣ Build Storybook for UI package
       - name: Build Storybook
-        run: yarn workspace gamevault-ui build-storybook
+        run: yarn workspace @games-vault/gamesvault-ui build-storybook
 
       # Prepare deployment folder for GitHub Pages
       - name: Prepare deployment folder
