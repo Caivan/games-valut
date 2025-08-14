@@ -44,7 +44,7 @@ jobs:
           mkdir -p dist
           cp -r apps/gamevault-front-app/dist dist/
           mv dist/dist dist/app
-          cp -r packages/gamevault-ui/storybook-static dist/storybook
+          cp -r packages/gamesvault-ui/storybook-static dist/storybook
 
       # Deploy combined build to GitHub Pages
       - name: Deploy to GitHub Pages
