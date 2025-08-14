@@ -58,6 +58,12 @@ const getSizeStyles = (size: string) => {
           ${({ theme }) => theme.spacing.lg};
         font-size: ${({ theme }) => theme.typography.sizes.subtitle};
       `;
+    case 'round':
+      return css`
+        padding: ${({ theme }) => theme.spacing.xs};
+        font-size: ${({ theme }) => theme.typography.sizes.label};
+        border-radius: ${({ theme }) => theme.radii.round};
+      `;
     default:
       return css``;
   }

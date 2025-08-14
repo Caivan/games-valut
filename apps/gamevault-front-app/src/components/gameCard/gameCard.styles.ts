@@ -21,11 +21,16 @@ export const GameMeta = styled.div`
 
 export const Badge = styled.span`
   background-color: ${({ theme }) => theme.colors.accent};
-  color: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.surfaceMuted};
   padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
   border-radius: ${({ theme }) => theme.radii.lg};
   font-size: ${({ theme }) => theme.typography.sizes.label};
-  font-weight: ${({ theme }) => theme.typography.weights.medium};
+  font-weight: ${({ theme }) => theme.typography.weights.bold};
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  background: linear-gradient(
+    -100deg,
+    ${({ theme }) => theme.colors.surfaceMuted} -100%,
+    ${({ theme }) => theme.colors.accent} 100%
+  );
 `;

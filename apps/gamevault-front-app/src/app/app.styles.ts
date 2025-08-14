@@ -2,12 +2,13 @@ import { styled } from '@games-vault/gamesvault-ui';
 
 export const AppContainer = styled.div`
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.surface};
+  background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.textPrimary};
+  position: relative;
 `;
 
 export const MainContent = styled.main`
-  padding: ${({ theme }) => theme.spacing.lg};
+  padding: ${({ theme }) => theme.spacing.md};
   max-width: 1200px;
   margin: 0 auto;
 `;

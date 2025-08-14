@@ -8,12 +8,15 @@ function useFilteredGames() {
     pageSize: 6,
     isNew: false,
   });
+
   const {
     games,
     loading,
     error,
     hasMore: hasMoreBackend,
     totalPages,
+    existingProviders,
+    existingTypes,
   } = useGamesData(filter);
 
   useEffect(() => {
@@ -31,7 +34,15 @@ function useFilteredGames() {
     game => (filter.isNew && game.isNew) || !filter.isNew
   );
 
-  return { filteredGames, loading, error, filter, setFilter };
+  return {
+    filteredGames,
+    loading,
+    error,
+    filter,
+    setFilter,
+    existingProviders,
+    existingTypes,
+  };
 }
 
 export default useFilteredGames;

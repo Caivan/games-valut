@@ -8,8 +8,8 @@ function useGamesData({
   page,
   pageSize,
   search,
-  types,
-  providers,
+  types: filterTypes,
+  providers: filterProviders,
 }: Pick<FilterState, 'page' | 'pageSize' | 'search' | 'types' | 'providers'>) {
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -17,6 +17,8 @@ function useGamesData({
   const [totalCount, setTotalCount] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [hasMore, setHasMore] = useState<boolean>(false);
+  const [existingProviders, setExistingProviders] = useState<string[]>([]);
+  const [existingTypes, setExistingTypes] = useState<string[]>([]);
 
   const fetchGames = useCallback(
     async ({ page, pageSize, search, types, providers }: GetGamesParams) => {
@@ -37,6 +39,10 @@ function useGamesData({
           Math.ceil((response.pagination.total || 0) / (pageSize ?? 1))
         );
         setHasMore(response.pagination.hasMore || false);
+        setExistingProviders(
+          response.meta.providers.flatMap(provider => provider.name) || []
+        );
+        setExistingTypes(response.meta.types || []);
       } catch (error) {
         console.error('Error fetching games:', error);
         setGames([]);
@@ -53,10 +59,10 @@ function useGamesData({
       page,
       pageSize,
       search,
-      types,
-      providers,
+      types: filterTypes,
+      providers: filterProviders,
     });
-  }, [fetchGames, page, pageSize, search, types, providers]);
+  }, [fetchGames, page, pageSize, filterProviders, search, filterTypes]);
 
   return {
     games,
@@ -65,6 +71,8 @@ function useGamesData({
     totalCount,
     totalPages,
     hasMore,
+    existingProviders,
+    existingTypes,
   };
 }
 

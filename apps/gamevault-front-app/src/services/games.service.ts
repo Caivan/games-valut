@@ -241,7 +241,7 @@ export const getGames = async (
       // Filter by providers
       if (providers && providers.length > 0) {
         filteredGames = filteredGames.filter(game =>
-          providers.includes(game.provider.id)
+          providers.includes(game.provider.name)
         );
       }
 
@@ -289,7 +289,6 @@ export const getGames = async (
           types: ['slots', 'table', 'live', 'instant'],
         },
       };
-      console.log('Mocked getGames response:', response);
       resolve(response);
     }, 1000);
   });

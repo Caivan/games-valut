@@ -1,6 +1,6 @@
 export type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'danger';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'round';
   disabled?: boolean;
   fullWidth?: boolean;
   children: React.ReactNode;
