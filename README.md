@@ -2,6 +2,15 @@
 
 A modern monorepo setup using Yarn workspaces with TypeScript support.
 
+## Project Architecture
+
+<img width="619" height="222" alt="image" src="https://github.com/user-attachments/assets/44f04f9c-a457-43ab-84ba-6c96655a625c" />
+
+- Games Vault UI: is the components library which implements the design system of the application and is exported as a package to be used in the front-end application. It can be reused for multiple applications to define a consistent design across all the applications.
+  
+- Games Vault Front App: Is the main consumer end application where all the features and logic of the games library is implemented, it makes use of the Games Vault UI as a dependency for use the design system and the base components available. 
+
+
 ## Project Structure
 
 ```
@@ -19,6 +28,18 @@ games-vault/
 ```
 
 ## Getting Started
+
+For a quick start, use these in a local environment
+ 
+ ```bash
+   yarn install
+   yarn workspace @games-vault/gamesvault-ui build
+   yarn workspace @games-vault/gamevault-front-app build
+   yarn workspace @games-vault/gamesvault-ui storybook
+   yarn workspace @games-vault/gamevault-front-app dev
+   
+ ```
+
 
 ### Prerequisites
 
@@ -57,6 +78,56 @@ games-vault/
 - `yarn workspace <workspace-name> <command>` - Run command in specific workspace
 - `yarn workspaces foreach <command>` - Run command in all workspaces
 - `yarn workspaces foreach -pi <command>` - Run command in parallel with interleaved output
+
+## Design system
+
+The design system is documented using Storybook, as well as the base components of the Components Library. 
+
+For a better and complete view of the design system values, run the storybook locally and verify it http://localhost:6006/
+
+
+   `yarn workspace @games-vault/gamesvault-ui storybook`
+
+- Colors
+  - Light Theme
+  - Dark Theme   
+- Typography
+- Radii
+- Spacing
+  
+### Colors
+<img width="800" height="866" alt="image" src="https://github.com/user-attachments/assets/a5efdf12-ec36-41da-bf9d-b7ff0aeff7d8" />
+
+### Typography
+
+<img width="800" height="755" alt="image" src="https://github.com/user-attachments/assets/ba4493f8-6d34-4ec5-8d64-25909532a539" />
+
+
+### Radii
+
+<img width="235" height="431" alt="image" src="https://github.com/user-attachments/assets/771fee70-a83b-46c8-948b-a2046249b8fd" />
+
+### Spacing
+
+<img width="738" height="319" alt="image" src="https://github.com/user-attachments/assets/0eb3be6b-5304-45fc-bf08-8bbab2ce19fe" />
+
+
+## Application
+
+### Dark Theme
+<img width="998" height="717" alt="image" src="https://github.com/user-attachments/assets/306db112-aa2d-4652-9e98-582d59095463" />
+
+### Light Theme
+<img width="1003" height="714" alt="image" src="https://github.com/user-attachments/assets/faa08048-521c-4d56-a286-4e5cfc505d4a" />
+
+
+## Future improvements and implementation
+
+- Full testing support of components and pages
+- Create more Base components in the `@games-vault/gamesvault-ui` components library
+- Improve layout of filtering
+- Adding microinteractions
+- Fix the Deployment of the complete project. There is a pipeline running in GitHub Actions; however, it has some issues with the base route.
 
 ## Adding New Packages
 
